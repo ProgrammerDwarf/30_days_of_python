@@ -98,11 +98,69 @@ print(f"The area of the circle is: {circle_area}")
 print(f"The circunmerence of the circle is: {round(circle_circunmerence, 2)}")
 """
 # 8. Calculate the slope, x-intercept and y-intercept of y = 2x -2
+"""
 point_a_x = 0
 point_a_y = int(2 * (point_a_x) - 2)
 point_b_y = 0
 point_b_x = int((2 + point_b_y ) / 2)
-slope = (point_b_y - point_a_y) / (point_b_x - point_a_x)
-print(f"The slope for point A(0,-2) and B(1, 0) is: {slope}")
-print(f"The x-intercept for the function y = 2x -2  is: {point_a_y}")
-print(f"The y-intercept for the function y = 2x -2 is: {point_b_x}")
+slope_1 = (point_b_y - point_a_y) / (point_b_x - point_a_x)
+#print(f"The slope for point A(0,-2) and B(1, 0) is: {slope}")
+#print(f"The x-intercept for the function y = 2x -2  is: {point_a_y}")
+#print(f"The y-intercept for the function y = 2x -2 is: {point_b_x}")
+"""
+# 9. Slope is (m = y2-y1/x2-x1). Find the slope and Euclidean distance between point (2, 2) and point (6,10)
+"""
+point_a_x = 2
+point_a_y= 2
+point_b_x = 6
+point_b_y = 10
+
+slope_2 = (point_b_y - point_a_y) / (point_b_x - point_a_x)
+#print(f'The slope is: {int(slope)}')
+"""
+#10. Compare the slopes in tasks 8 and 9. Remember to take out the comment symbols for 8 and 9 exercises
+"""
+answer_slopes = slope_1 > slope_2 
+print("The slope 1 is greater than 2?")
+print(f"{answer_slopes}")
+
+answer_slopes = slope_1 < slope_2 
+print("The slope 2 is greater than 1?")
+print(f"{answer_slopes}")
+
+print("The slope are equals?")
+answer_slopes = slope_1 == slope_2 
+print(f"{answer_slopes}")
+"""
+# 11. Calculate the value of y (y = x^2 + 6x + 9). Try to use different x values and figure out at what x value y is going to be 0.
+"""
+x = -3
+y = x ** 2 + 6 * x + 9
+
+print(f"at {x}, y value is: {y}")
+"""
+
+# 12. Find the length of 'python' and 'dragon' and make a falsy comparison statement.
+
+word_1 = 'python'
+word_2 = 'dragon'
+
+is_not_comparison = len(word_1) != len(word_2)
+#print(is_not_comparison)
+
+# 13. Use and operator to check if 'on' is found in both 'python' and 'dragon'. Remember to quit comment symbol for exercise 12
+"""
+answer_13 = 'on' in word_1 and 'on' in word_2
+print(answer_13)
+"""
+#14. I hope this course is not full of jargon. Use in operator to check if jargon is in the sentence.
+"""
+quote = "I hope this course is not full of jargon"
+answer_14 = "jargon" in quote
+print(answer_14)
+"""
+
+#15. There is no 'on' in both dragon and python. Remember to take out the comment symbol for exercise 12
+
+answer_15 =  not ('on' in word_1 and 'on' in word_2)
+print(answer_15)
