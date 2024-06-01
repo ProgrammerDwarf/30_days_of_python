@@ -161,6 +161,86 @@ print(answer_14)
 """
 
 #15. There is no 'on' in both dragon and python. Remember to take out the comment symbol for exercise 12
-
-answer_15 =  not ('on' in word_1 and 'on' in word_2)
+"""
+answer_15 =  not('on' in word_1 and 'on' in word_2)
 print(answer_15)
+
+# another way is to resolve this by list comprehension
+answer_15 = [not 'on' in s for s in (word_1,word_2)]
+print(answer_15)
+"""
+
+# 16. Find the length of the text python and convert the value to float and convert it to string
+"""
+python_length = len(word_1)
+float_python_len = float(python_length)
+string_number = str(float_python_len)
+
+print(f'''python_length} -> {type(python_length)},\n{float_python_len} -> {type(float_python_len)},\n{string_number} -> {type(string_number)}''')
+"""
+
+# 17. Even numbers are divisible by 2 and the remainder is zero. How do you check if a number is even or not using python?
+"""
+given_number = int(input('Write an integer number please: \n'))
+print("We will check if this number is even, please wait...")
+remainder = given_number % 2
+answer = remainder == 0
+print(answer)
+"""
+# 18. Check if the floor division of 7 by 3 is equal to the int converted value of 2.7.
+"""
+floor_division_result = 7 // 3
+print(floor_division_result)
+converted_number_to_int = int(2.7)
+print(converted_number_to_int)
+answer = floor_division_result == converted_number_to_int
+print(answer)
+"""
+
+# 19. Check if type of '10' is equal to type of 10
+"""
+answer = type('10') == type(10)
+print(answer)
+"""
+
+# 20. Check if int('9.8') is equal to 10
+"""
+converted_float = int('9.8')
+answer = converted_float == 10
+print(answer)
+
+This cannot be possible, hence, an error will show up after running this.
+"""
+
+# 21. Write a script that prompts the user to enter hours and rate per hour. Calculate pay of the person?
+"""
+work_hours = int(input('Please, enter the amount of hours you usually work per week: '))
+rate_per_hour = float(input('Please, enter your rate per hour: '))
+total = work_hours * rate_per_hour
+print(total)
+"""
+
+# 22. Write a script that prompts the user to enter number of years. Calculate the number of seconds a person can live. Assume a person can live hundred years
+"""
+age = int(input('Please, enter your age and I will tell you how many seconds you are left to live:\n'))
+second_left = (100 - 34) * 365 * 24 * 60 * 60 
+print(second_left, "seconds left")
+"""
+
+"""23. Write a Python script that displays the following table
+1 1 1 1 1
+2 1 2 4 8
+3 1 3 9 27
+4 1 4 16 64
+5 1 5 25 125
+"""
+
+answer =f"""
+1 {1 ** 0} {1 ** 1} {1 ** 2} {1 ** 3} 
+2 {2 ** 0} {2 ** 1} {2 ** 2} {2 ** 3} 
+3 {3 ** 0} {3 ** 1} {3 ** 2} {3 ** 3} 
+4 {4 ** 0} {4 ** 1} {4 ** 2} {4 ** 3} 
+5 {5 ** 0} {5 ** 1} {5 ** 2} {5 ** 3} 
+"""
+print(answer)
+
