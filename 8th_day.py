@@ -1,6 +1,4 @@
-# Dictionaries
-
-
+separator = 'Exercise print'
 ## 1. Create an empty dictionary called dog
 dog = {}
 
@@ -31,35 +29,39 @@ student = {
     }
 }
 ## 4.  Get the length of the student dictionary
+print(f'{separator:!^100}')
 print(len(student))
 
 ## 5. Get the value of skills and check the data type, it should be a list
+print(f'{separator:!^100}')
 print(student['skills'])
 print(type(student['skills']))
 
 ## 6. Modify the skills values by adding one or two skills
 student['skills'].append('security testing')
 student['skills'][4] = 'algebra'
+print(f'{separator:!^100}')
 print(student['skills'])
 
 ## 7. Get the dictionary keys as a list
 dict_keys = student.keys()
+print(f'{separator:!^100}')
 print(dict_keys)
 
 ## 8. Get the dictionary values as a list
 dict_values = student.values()
+print(f'{separator:!^100}')
 print(dict_values)
 
 ## 9. Change the dictionary to a list of tuples using items() method
-print('+' * 100)
+print(f'{separator:!^100}')
 print(student.items())
 
 ## 10. Delete one of the items in the dictionary
 del student['last_name']
 student.popitem()
-print('+' * 100)
+print(f'{separator:!^100}')
 print(student)
 
 ## 11. Delete one of the dictionaries
 del student
-print(student)
