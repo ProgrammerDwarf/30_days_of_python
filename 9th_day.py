@@ -144,7 +144,7 @@ person = {
     'last_name': 'Yetayeh',
     'age': 250,
     'country': 'Finland',
-    'is_marred': True,
+    'is_married': True,
     'skills': ['MongoDB', 'Node', 'Java', 'Python'],
     'address': {
         'street': 'Space street',
@@ -159,6 +159,7 @@ person = {
 * If a person skills has only JavaScript and React, print('He is a front end developer'), if the person skills has Node, Python, MongoDB, print('He is a backend developer'), if the person skills has React, Node and MongoDB, Print('He is a fullstack developer'), else print('unknown title') - for more accurate results more conditions can be nested!
 
 * If the person is married and if he lives in Finland, print the information in the following format:
+    Asabeneh Yetayeh lives in Finland. He is married.
 """
 if 'skills' in person:
     skills_length: int = len(person['skills'])
@@ -177,3 +178,13 @@ elif 'React' in person['skills'] and 'Javascript' in person['skills']:
     print('You are a fronted dev')
 else:
     print('unknown title')
+
+### Last exercise
+if person['is_married'] == True and person['country'] == 'Finland':
+    print(f'{person['first_name']} lives in {person['country']}. He/She is married')
+elif person['is_married'] == False and person['country'] == 'Finland':
+    print(f'{person['first_name']} lives in {person['country']}. He/She is not married')
+elif person['is_married'] == True and person['country'] != 'Finland':
+    print(f'{person['first_name']} is not living in {person['country']}. He/She is married')
+else:
+    print('This person does not live in Finland')
