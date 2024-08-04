@@ -166,8 +166,7 @@ arr_length: int = len(fruits)
 casket: str = ''
 
 for iterator in range(arr_length - 1):
-    print(f'<<<< antes: {fruits}')
     casket = fruits.pop()
-    print(f'^^^^^^ se le quita el último elemento: {fruits}')
     fruits.insert(iterator, casket)
-    print(f'***** Insertamos el elemento en el index: {iterator} - {fruits}')
+else:
+    print(f'Task completed, the reversed array is {fruits}')
