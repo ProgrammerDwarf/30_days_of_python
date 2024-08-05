@@ -142,15 +142,8 @@ else:
 
 """
 Exercises: Level 3
-
-1. Go to the data folder and use the countries.py file. Loop through the countries and extract all the countries containing the word land.
-
-    
-3. Go to the data folder and use the countries_data.py file.
-    i. What are the total number of languages in the data
-    ii. Find the ten most spoken languages from the data
-    iii. Find the 10 most populated countries in the world
 """
+# 1. Go to the data folder and use the countries.py file. Loop through the countries and extract all the countries containing the word land.
 
 # from data.countries import countries
 # for country in countries:
@@ -160,13 +153,52 @@ Exercises: Level 3
 #     print("task completed!")
 
 # 2. This is a fruit list, ['banana', 'orange', 'mango', 'lemon'] reverse the order using loop.
-fruits: list = ['banana', 'orange', 'mango', 'lemon', 'pear', 'pinapple']
+# fruits: list = ['banana', 'orange', 'mango', 'lemon', 'pear', 'pinapple']
 
-arr_length: int = len(fruits)
-casket: str = ''
+# arr_length: int = len(fruits)
+# casket: str = ''
 
-for iterator in range(arr_length - 1):
-    casket = fruits.pop()
-    fruits.insert(iterator, casket)
+# for iterator in range(arr_length - 1):
+#     casket = fruits.pop()
+#     fruits.insert(iterator, casket)
+# else:
+#     print(f'Task completed, the reversed array is {fruits}')
+
+"""
+3. Go to the data folder and use the countries_data.py file.
+    i. What are the total number of languages in the data
+    ii. Find the ten most spoken languages from the data
+    iii. Find the 10 most populated countries in the world
+"""
+
+from data.countries_data import countries_data
+
+languages_unique: set = set()
+language_list: list = []
+
+for country in countries_data:
+    language_list += country['languages']
+    for language in country['languages']:
+        languages_unique.add(language)
+        
 else:
-    print(f'Task completed, the reversed array is {fruits}')
+    print('Task completed.')
+    print(len(languages_unique))
+    print(len(language_list))
+
+counter_tuple: tuple = tuple()
+most_spoken_list: list = list()
+
+for language in languages_unique:
+    counter = language_list.count(language)
+    counter_tuple = (counter, language)
+    most_spoken_list.append(counter_tuple)
+most_spoken_list.sort()
+most_spoken_list.reverse()
+
+counter = 0
+for pairs in most_spoken_list[:10]:
+    counter += 1
+    print(f'')
+    print(f"{counter}. {pairs[1]} spoken by {pairs[0]} countries")
+    
